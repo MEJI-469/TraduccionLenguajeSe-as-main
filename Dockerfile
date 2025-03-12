@@ -1,8 +1,8 @@
 # Usa una imagen base de Python
 FROM python:3.9-slim
 
-# Actualiza los paquetes y instala libGL
-RUN apt-get update && apt-get install -y libgl1
+# Actualiza los paquetes y instala libGL y libglib2.0-0
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0
 
 # Establece el directorio de trabajo
 WORKDIR /app
