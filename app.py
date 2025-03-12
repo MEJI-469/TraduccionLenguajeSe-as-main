@@ -79,6 +79,6 @@ def predict():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Usa el puerto de Railway
+    port = int(os.environ.get("PORT", ${PL_PORT}))  # Usa el puerto de Railway
     app.run(host="0.0.0.0", port=port, debug=True)
 
