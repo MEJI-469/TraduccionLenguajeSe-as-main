@@ -1,4 +1,5 @@
 import base64
+import os
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -76,5 +77,8 @@ def predict():
     # Retornar la predicción
     return jsonify({"prediction": prediction})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Usa el puerto de Railway
+    app.run(host="0.0.0.0", port=port, debug=True)
+
